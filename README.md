@@ -1,7 +1,7 @@
 # Calendar
 
 
-<h3> A console based application to build computer based tests to conduct exams </h3>
+<h3> A console based application to perform calender based operations </h3>
 <h4 style="font: Consolas">
  <ul>
 	<li>Initially written in Turbo C </li>
