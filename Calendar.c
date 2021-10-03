@@ -2,7 +2,8 @@
 #include<signal.h>
 #include<string.h>
 #include<conio.h>
- 
+
+// To return the number of days in a given month of a particular year i.e., if it is leap year or not 
 int getNumberOfDays(int month,int year)
 {
    switch(month)
@@ -25,6 +26,8 @@ int getNumberOfDays(int month,int year)
       default: return(-1);
    }
 }
+
+// To return the name of a week
 char *getName(int odd)
 {
    switch(odd)
@@ -39,6 +42,8 @@ char *getName(int odd)
       default:return("Error in getName\(\) module.Invalid argument passed");
    }
 }
+
+// To fetch the name of the week of a particular date in the form of an integer
 int getOddNumber(int day,int mon,int year)
 {
    int res=0,t1,t2,y=year;
@@ -70,6 +75,7 @@ int getOddNumber(int day,int mon,int year)
    res = res%7;
    return res;
 }
+
 char *getWeek(int dd,int mm,int yy)
 {
    int odd;
@@ -92,6 +98,8 @@ char *getWeek(int dd,int mm,int yy)
       return("\nPlease give year more than 1600");
    }
 }
+
+// To print the calendar of a particular month of an year at starting from the given coordinates of a week 
 void printMonth(int mon,int year,int x,int y)
 {
    int nod,odd,cnt,d=1,x1=x,time=1;
@@ -182,6 +190,7 @@ void printMonth(int mon,int year,int x,int y)
       printf("%02d",d);
    }
 }
+
 void han(void)
 {
    FILE *fp;
@@ -190,6 +199,7 @@ void han(void)
    fcloseall();
    main();
 }
+
 int checkForErrors()
 {
    FILE *fp;
@@ -205,6 +215,7 @@ int checkForErrors()
       return -1;
    }
 }
+
 void printLogo(int col,int x,int y)
 {
     int x1=wherex(),y1=wherey();
@@ -215,6 +226,7 @@ void printLogo(int col,int x,int y)
     cprintf("");
     gotoxy(x1,y1);
 }
+
 main()
 {
    char ch='\0',ch1,x,y,x1=1,y1=1;
